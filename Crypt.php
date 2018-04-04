@@ -29,5 +29,9 @@ class Crypt
             public function decrypt($string){
                 return trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256,$this->key,base64_decode($string),MCRYPT_MODE_ECB,$this->iv));
             }
-
 }
+
+$obj=new Crypt('Your Key');
+echo $ecnriptionString=$obj->encrypt('EncriptionString');
+echo $obj->decrypt($ecnriptionString);
+?>
