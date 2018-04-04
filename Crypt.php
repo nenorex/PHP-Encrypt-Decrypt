@@ -21,5 +21,13 @@ class Crypt
             $this->key = trim($key);
         }
 
+            public function encrypt($string){
+                $string=trim($string);
+                return base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $this->key, $string, MCRYPT_MODE_ECB, $this->iv));
+            }
+
+            public function decrypt($string){
+                return trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256,$this->key,base64_decode($string),MCRYPT_MODE_ECB,$this->iv));
+            }
 
 }
