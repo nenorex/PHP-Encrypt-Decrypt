@@ -1,0 +1,7 @@
+# Encrypt and Decrypt Php Class
+
+This Encrypt and Decrypt class can be used to safe store your data into the database.
+
+This class works very fast and is very simple to be implemented.
+
+Encrypt class has a feature that allow you to customize the encoded algorithm by a custom key. With this feature it will be very hard for anyone to break your data.
